@@ -12,12 +12,12 @@ form.addEventListener("submit", function (e) {
   const bmi = (weight / Math.pow(height, 2)).toFixed(2);
 
   const result = document.getElementById("result");
-  const h2 = document.createElement("h2");
-  const h3 = document.createElement("h3");
+  const h2 = document.createElement("p");
+  const h3 = document.createElement("p");
 
   h2.innerText = `Your BMI is ${bmi}`;
   h3.innerText = `You are ${
-    bmi > 24.9 ? "overWeight" : bmi >= 18.6 ? "normal" : "underWeight"
+    bmi > 24.9 ? "overWeight" : bmi >= 18.6 ? "normal" : "underweight"
   }`;
 
   result.appendChild(h2);
